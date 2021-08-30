@@ -28,12 +28,12 @@ func (s *Server) init() {
 }
 
 func (s *Server) Get(w http.ResponseWriter, r *http.Request) {
-	time.Sleep(5 * time.Second)
+	time.Sleep(1 * time.Second)
 	w.Write([]byte("Get\n"))
 }
 
 func (s *Server) Post(w http.ResponseWriter, r *http.Request) {
-	time.Sleep(5 * time.Second)
+	time.Sleep(1 * time.Second)
 	w.Write([]byte("Post\n"))
 }
 
