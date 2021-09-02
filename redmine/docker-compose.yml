@@ -1,0 +1,21 @@
+version: '3'
+services:
+  redmine:
+    image: redmine:4.0.0
+    ports:
+      - "3000:3000"
+    restart: always
+    environment:
+      REDMINE_DB_MYSQL: "mysql"
+      REDMINE_DB_DATABASE: "redmine"
+      REDMINE_DB_USERNAME: "user"
+      REDMINE_DB_PASSWORD: "password"
+  mysql:
+    image: mysql:5.7.24
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "secret"
+      MYSQL_DATABASE: "redmine"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "password"
