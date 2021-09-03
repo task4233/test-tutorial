@@ -19,3 +19,21 @@ services:
       MYSQL_DATABASE: "redmine"
       MYSQL_USER: "user"
       MYSQL_PASSWORD: "password"
+  locust-master:
+    build: .
+    ports:
+      - "8089:8089"
+    environment:
+      MODE: master
+  locust-slave-1:
+    build: .
+    environment:
+      MODE: slave
+  locust-slave-2:
+    build: .
+    environment:
+      MODE: slave
+  locust-slave-3:
+    build: .
+    environment:
+      MODE: slave
