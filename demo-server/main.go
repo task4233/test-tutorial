@@ -34,6 +34,7 @@ func (s *Server) Get(w http.ResponseWriter, r *http.Request) {
 
 func (s *Server) Post(w http.ResponseWriter, r *http.Request) {
 	time.Sleep(1 * time.Second)
+gjt
 	w.Write([]byte("Post\n"))
 }
 
